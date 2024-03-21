@@ -1,0 +1,540 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tithira De Silva</title>
+    <link rel="icon" type="image" href="logoWhite.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/993baaa52e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.querySelector('nav ul');
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            navbar.classList.toggle('active');
+            navbarToggler.classList.toggle('open');
+        }
+    </script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header"><img src="logoweb1.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <li>
+                        <a href="#header">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#contact">Contact</a>                      
+                    </li>
+                </ul>
+                <div class="navbar-toggler" onclick="toggleNavbar()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>  
+            </nav>
+
+            <div id="particles-js"></div>
+        
+            <div class="header-text">
+                <h1> Hello , <span>Tithira</span> Here !</h1>
+                <p><span class="before-multiple">I'm a </span><span class="multiple-text"></span></p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/tithira.desilva.14/" target="_blank"><i class="fa-brands fa-facebook fa-fade fa-1x"></i></a>
+                <a href="https://www.instagram.com/tikkazzz/" target="_blank"><i class="fa-brands fa-instagram fa-fade fa-1x"></i></i></a>
+                <a href="https://www.linkedin.com/in/tithiradesilva/" target="_blank"><i class="fa-brands fa-linkedin fa-fade fa-1x"></i></a>
+                <a href="https://github.com/tithiradesilva" target="_blank"><i class="fa-brands fa-github fa-fade fa-1x"></i></a>
+            </div>
+            <a href="Tithira De Silva Resume.pdf" download class="cv-download-button" target="_blank">Download CV</a>
+        </div>
+    </div>
+
+   <!-- Update section-counter with unique ID -->
+    <section class="ftco-counter img bg-light" id="section-counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+                    <div class="counter-block">
+                        <div class="icon">
+                            <span class="fa fa-briefcase"></span>
+                        </div>
+                        <!-- Update the ID for the number -->
+                        <div class="text">
+                            <strong class="number" id="projectCompleteCounter" data-number="10">0</strong>
+                            <span>Project Completed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+					<div class="counter-block">
+						<div class="icon">
+							<span class="fa fa-smile-o"></span>
+						</div>
+						<div class="text">
+							<strong class="number" data-number="5">0</strong>
+							<span>Happy Clients</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+					<div class="counter-block">
+						<div class="icon">
+							<span class="fa fa-coffee"></span>
+						</div>
+						<div class="text">
+							<strong class="number" data-number="15">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+					<div class="counter-block">
+						<div class="icon">
+							<span class="fa fa-calendar"></span>
+						</div>
+						<div class="text">
+							<strong class="number" data-number="2">0</strong>
+							<span>Years experienced</span>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to animate the counter
+            function animateCounter(element) {
+                const target = parseInt(element.getAttribute('data-number'));
+                const duration = 1000; // Duration in milliseconds (adjust as needed)
+                const totalSteps = 100; // Total number of steps
+                const stepSize = target / totalSteps;
+                let current = 0;
+    
+                // Function to update the counter
+                function updateCounter() {
+                    current += stepSize;
+                    if (current >= target) {
+                        clearInterval(counterInterval);
+                        current = target;
+                    }
+                    element.textContent = Math.ceil(current); // Round the current value to ensure it's an integer
+                }
+    
+                // Initial update
+                updateCounter();
+    
+                // Update the counter every interval
+                const counterInterval = setInterval(updateCounter, duration / totalSteps);
+            }
+    
+            // Get all elements with class 'number' and animate them
+            const counters = document.querySelectorAll('.number');
+            counters.forEach(counter => {
+                animateCounter(counter);
+            });
+        });
+    </script>
+
+    <!-- about me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_container">
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p class="subtitle2">
+                            <br>I develop websites and applications, Graphic Designing, Editing and Photography. I would also love to improove me day by day and this portfolio will help you to get to know about me, my work and contact me for inquiries.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Expeirience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>
+                                    <i class="fa-brands fa-html5 fa-fade" style="color: #ababab; font-size: 70px; margin-right: 105px;"></i>
+                                    <i class="fa-brands fa-css3 fa-fade" style="color: #ababab; font-size: 70px; margin-right: 75px;"></i>
+                                    <i class="fa-brands fa-js fa-fade" style="color: #ababab; font-size: 70px; margin-right: 90px;"></i>
+                                    <i class="fa-brands fa-react fa-fade" style="color: #ababab; font-size: 70px;"></i>
+                                    <i class="fa-solid fa-leaf fa-fade" style="color: #ababab; font-size: 70px; margin-right: 90px"></i>
+                                    <i class="fa-brands fa-figma fa-fade" style="color: #ababab; font-size: 70px;"></i><br>
+                                    <i class="fa-brands fa-php fa-fade" style="color: #ababab; font-size: 70px; margin-right: 55px;"></i>
+                                    <i class="fa-brands fa-node fa-fade" style="color: #ababab; font-size: 70px; margin-right: 75px;"></i>
+                                    <i class="fa-brands fa-python fa-fade" style="color: #ababab; font-size: 70px; margin-right: 100px;"></i>
+                                    <i class="fa-brands fa-java fa-fade" style="color: #ababab; font-size: 70px; margin-right: 75px;"></i>
+                                    <i class="fa-brands fa-github fa-fade" style="color: #ababab; font-size: 70px; margin-right: 75px;" ></i>
+                                    <i class="fa-brands fa-bootstrap fa-fade" style="color: #ababab; font-size: 70px;" ></i><br>
+                                    <i class="fa-brands fa-wordpress fa-fade" style="color: #ababab; font-size: 70px; margin-right: 90px;"></i>
+                                    <i class="fa-solid fa-database fa-fade" style="color: #ababab; font-size: 70px; margin-right: 90px;"></i>
+                                    <i class="fa-brands fa-apple fa-fade" style="color: #ababab; font-size: 70px; margin-right: 90px;"></i>
+                                    <i class="fa-brands fa-windows fa-fade" style="color: #ababab; font-size: 70px; margin-right: 80px;"></i>
+                                    <i class="fa-solid fa-video fa-fade" style="color: #ababab; font-size: 70px; margin-right: 60px;" ></i>
+                                    <i class="fa-brands fa-android fa-fade" style="color: #ababab; font-size: 70px;"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Frontend Developer (2023 Dec- 2024 Mar)</span><br> ITSoft Solutions</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span> University of Westminster</span><br> 
+                                    Award of Diploma of Higher Education<br>
+                                    Award of Certificate of Higher Education
+                                </li>
+                                <li><span> Informatics Institute of Techinology</span><br>
+                                    Foundation degree course <br>
+                                </li>
+                                <li><span> Ananda College</span><br>
+                                    G.C.E. (A/L)
+                                </li>
+                                <li><span> Taxila Central College</span><br>
+                                    G.C.E. (O/L)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-col-1">
+                        <img src="image2.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle3">Services</h1>
+
+            <div class="services-list">
+                <div>
+                    <i class="fa-sharp fa-solid fa-code fa-shake fa-4x" style="color: #ffffff;"></i>
+                    <h2><span style="color: red;">Web</span> Developing</h2>
+                    <p> Web development captivates me as it's the art of crafting virtual landscapes, merging creativity with practicality. <br>I'm drawn to its dynamic nature, where every project presents a new challenge, inspiring me to innovate and create impactful online experiences."</p>
+                    <br>
+                    <p><span style="color: rgb(197, 197, 197); font-weight: 600;"><br>HTML | CSS | JS | React | PHP | mySQL</span></p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store fa-shake fa-4x" style="color: #ffffff;"></i>
+                    <h2><span style="color: red;">App</span> Developing</h2>
+                    <p> "App development is my creative canvas, where imagination blends seamlessly with functionality. <br>Its dynamic landscape inspires me to craft intuitive solutions that enrich users' lives. I'm driven by the endless possibilities to innovate and create impactful digital experiences.</p>
+                    <br>
+                    <p><span style="color: rgb(197, 197, 197); font-weight: 600;">Dart</span></p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen-fancy fa-shake fa-4x" style="color: #ffffff;"></i>
+                    <h2><span style="color: red;">Graphic</span> Designing</h2>
+                    <p> Exploring graphic design is a journey into the realm of visual storytelling, where every project is an opportunity to blend imagination with practicality.<br>It's always changing, pushing me to make eye-catching designs that tell stories and catch people's attention.</p>
+                    <br>
+                    <p><span style="color: rgb(197, 197, 197); font-weight: 600;"><br>Photoshop | Illustrator | Canva | Lightroom</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle3">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="project1.png">
+                    <h3><span style="color: rgb(255, 255, 255); font-weight: 600;">Visit Sri Lanka - A Sri Lankan Travelling Guide Website with Q&A</span></h3>
+                    <p> This Website was built to help toursits to get to know more about Sri Lanka. This website has it's own store, quizz and articles about Sri Lankan Tourism.</p>
+                    <p><span style="color: rgb(197, 197, 197); font-weight: 600;"><br><br><br>Buit with ㅤㅤ: ㅤㅤHTMLㅤㅤCSSㅤㅤJavaScript</span></p>
+                </div>
+                <div class="work">
+                    <img src="project2.png">
+                    <h3><span style="color: rgb(255, 255, 255); font-weight: 600;">Maintenex - A Vehicle Service Records Management Application</span></h3>
+                    <p> This mobile app was developed to reduce vehicle accidents and faults by managing the maintainance and service records of vehicle owners <br> This app contains features such as managing service records, part-replacement records, service records, document renewal reminders.</p>
+                    <p><span style="color: rgb(197, 197, 197); font-weight: 600;"><br>Built with ㅤㅤ:ㅤㅤ DartㅤㅤFirebase</span></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <div id="contact">
+        <div class="contact-container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle3">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope fa-shake fa-1x" style="color: #ffffff;"></i><span style="color: rgb(255, 255, 255); font-size: 17px; font-weight: 600;">  ㅤㅤtithiradesilva@gmail.com</span></p>
+                    <p><i class="fa-solid fa-phone fa-shake fa-1x" style="color: #ffffff;"></i><span style="color: rgb(255, 255, 255);  font-size: 17px; font-weight: 600;">ㅤㅤ+94719044433</span></p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/tithira.desilva.14/" target="_blank"><i class="fa-brands fa-facebook fa-bounce fa-1x"></i></a>
+                        <a href="https://www.instagram.com/tikkazzz/" target="_blank"><i class="fa-brands fa-instagram fa-bounce fa-1x"></i></i></a>
+                        <a href="https://www.linkedin.com/in/tithiradesilva/" target="_blank"><i class="fa-brands fa-linkedin fa-bounce fa-1x"></i></a>
+                        <a href="https://github.com/tithiradesilva" target="_blank"><i class="fa-brands fa-github fa-bounce fa-1x"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name = "submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows= "6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="send-message-button">Confirm</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> 2024 © COPYRIGHT. ALL RIGHTS RESERVED. </p>
+        </div>
+    </div>
+    <!-- <script src="styles.js"></script> -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS("particles-js", {
+          "particles": {
+            "number": {
+              "value": 80,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 6,
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+    </script>
+
+    
+      
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            ScrollReveal({
+                reset: true,
+                distance: '80px',
+                duration: 1000,
+                delay: 200
+            });
+            
+            ScrollReveal().reveal('.header-text p', { origin: 'top' });
+            ScrollReveal().reveal('.header-text h1', { origin: 'left' });
+            ScrollReveal().reveal('.about-col-1 img', { origin: 'right', delay: 300 });
+            ScrollReveal().reveal('.about-col-2 .subtitle', { origin: 'left', delay: 400 });
+            ScrollReveal().reveal('.about-col-2 .subtitle2', { origin: 'left', delay: 500 });
+            ScrollReveal().reveal('.tab-titles', { origin: 'bottom', delay: 600 });
+            ScrollReveal().reveal('.progress-container', { origin: 'left', delay: 700, interval: 100 });
+            ScrollReveal().reveal('.subtitle3', { origin: 'bottom', interval: 200 });
+            ScrollReveal().reveal('.services-list div', { origin: 'bottom', interval: 200 });
+            ScrollReveal().reveal('.work-list div', { origin: 'bottom', interval: 200 });
+            ScrollReveal().reveal('.row', { origin: 'left', interval: 200 });
+        });
+
+        const typed = new Typed('.multiple-text', {
+            strings: ['Frontend Developer', 'Designer', 'Blogger'],
+            typeSpeed: 70,
+            backSpeed: 70,
+            backDelay: 1000,
+            loop: true
+        });
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab (tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add ("active-tab"); I
+        }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the circle element
+        var circle = document.getElementById('circle');
+        
+        // Update circle position based on mouse movement
+        document.addEventListener('mousemove', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            
+            // Set circle position to mouse coordinates
+            circle.style.left = (x - circle.offsetWidth / 2) + 'px';
+            circle.style.top = (y - circle.offsetHeight / 2) + 'px';
+        });});
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz1ibcLx4J49HBn0V2-fVXP1nU0y6RoK7hTQ3F9vk76CMzIDAR5K_3CDcLKH2xZ7WDamg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully"
+                setTimeout(function () {
+                    msg.innerHTML = ''
+                },5000)
+            form.reset()
+        })
+            .catch(error => console.error('Error!', error.message))
+        })
+
+        // Function to scroll back to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll behavior
+            });
+        }
+        
+        // Function to show/hide the button based on scroll position
+        
+        window.onscroll = function() {scrollFunction()};
+
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
+            }
+        }
+        
+    </script>
+
+    <script>
+    
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "1200px";
+    }
+    
+    </script>
+
+<button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>      
+</body>
+</html>
